@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "bloggeekdev": {
+      "hosting": {
+        "ng-first-app": [
+          "bloggeekdev"
+        ]
+      }
+    }
+  }
+}
