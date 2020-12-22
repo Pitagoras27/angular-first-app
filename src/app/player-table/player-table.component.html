@@ -1,0 +1,41 @@
+<section>
+  <h1>Players</h1>
+  <div class="container">
+    <div class="interior">
+      <a class="btn" (click)="newPlayer()">Add new player</a>
+    </div>
+  </div>
+  <div class="tbl-header">
+    <table cellpading="0" cellspacing="0" border="0">
+      <thead>
+        <th>Name</th>
+        <th>Last Name</th>
+        <th>Position</th>
+        <th>Weigth</th>
+        <th>Heigth</th>
+        <th>Nationality</th>
+        <th>Left footed</th>
+        <th>Actions</th>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content-player">
+    <table cellpading="0" cellspacing="0" border="0">
+      <tbody>
+        <tr *ngFor="let player of ( players$ | async )">
+          <th>{{ player.name }}</th>
+          <th>{{ player.lastName }}</th>
+          <th>{{ player.position }}</th>
+          <th>{{ player.weight }}</th>
+          <th>{{ player.height }}</th>
+          <th>{{ player.nationality }}</th>
+          <th>{{ player.leftFooted }}</th>
+          <th>
+            <button>Edit</button>
+            <button>Delete</button>
+          </th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
